@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="">
+        <img src="./croco.png" alt="">
+    </header>
+    <div class="container">
+        <div class="z1">
+            <div class="z1__wrapper">
+                <div class="z1__left">
+                    <div class="sqs">
+                        <div class="sq"></div>
+                        <div class="sq"></div>
+                        <div class="sq"></div>
+                        <div class="sq"></div>
+                    </div>
+                </div>
+
+                <div class="z1__right">
+
+                    <div class="code">
+                        <div class="code__row">
+                            <p>display:</p>
+                            <p>flex</p>
+                        </div>
+                        
+                        <form id="form">
+
+                        <label for="ask">
+                            <p>flex-direction</p>
+                            <input type="text" id="ask"></label>
+                        
+                    </form>
+                    </div>
+                    
+                   
+                </div>
+            </div>
+             <p class="message"></p>
+        </div>
+    </div>
+
+
+    <script>
+        const arr = [1,2,3]
+        console.log(arr.__proto__)
+        console.log(arr.prototype)
+        console.log(Object.__proto__)
+
+        window.addEventListener('DOMContentLoaded', ()=>{
+             const sqs = document.querySelector('.sqs')
+        const form = document.getElementById('form')
+        const input = document.querySelector('#form input[type="text"]')
+        let inputValue = ''
+        input?.addEventListener('input', (e)=>{
+            inputValue = e.target.value
+            
+        })
+        console.log(inputValue)
+        
+        const message = document.querySelector('.message')
+        let sms = ''
+        form.addEventListener('submit', (e)=>{
+            e.preventDefault()
+           
+            
+           
+            if(inputValue === 'column'){
+                message.innerText = 'true'
+                sqs.style.flexDirection = 'column'
+            }else{
+                
+                 message.innerText = 'think again'
+            }
+        })
+        })
+       
+    </script>
+</body>
+</html>

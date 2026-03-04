@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    background-color: #e5e495;
+
+}
+header img{
+    max-width: 110px;
+    height: auto;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.z1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.z1__wrapper { 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.sq {
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(183, 204, 197);
+}
+
+.sqs {
+    display: flex;
+    gap: 5px;
+}
+
+.z1__left {
+    flex: 0 0 auto;
+    max-width: 200px;
+    width: 100%;
+}
+
+.z1__right {
+    display: flex;
+    gap: 20px;
+    flex: 0 0 auto; 
+    max-width: 300px;
+    width: 100%;
+}
+
+.z1__right input {
+    border: none;
+    outline: none;
+    width: 100%; 
+    background-color: transparent;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+   
+    background-color: #a79393;
+    border-radius: 4px;
+}
+
+label p {
+    white-space: nowrap;
+    padding: 0;
+    margin: 0; 
+}
+
+.code{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: #c6afaf;
+    padding: 5px;
+}
+.code__row{
+    display: flex;
+    gap: 5px;
+}
+.message{
+    color: #c6afaf;
+    margin:0 auto;
+    padding-left:35px ;
+}
