@@ -4,33 +4,56 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../style.css">
-<title>Flex 1</title>
+<title>Flex 3</title>
 </head>
 <body>
 
 <header>
-<img src="../croco.png">
+<img src="../croco.png" alt="">
 <div class="desc">
-<h2>Урок 1</h2>
-<p>Включи Flex</p>
+<h2>Урок 3</h2>
+<p>Верни элементы в строку</p>
 </div>
+
 </header>
 
 <div class="container flex1">
+
+
 <div class="theory">
 
 <div class="theory__badge">Теория</div>
 
-<div class="theory__title">Flex контейнер</div>
+<div class="theory__title">
+Строка в Flex
+</div>
 
-<p>Flex — это способ расположить элементы внутри контейнера.</p>
+<p>
+Flex может располагать элементы как вертикально, так и горизонтально.
+</p>
+
+<p>
+Если используется значение:
+</p>
 
 <div class="code-block">
-display: flex;
+flex-direction: column;
+</div>
+
+<p>
+элементы идут сверху вниз.
+</p>
+
+<p>
+Чтобы вернуть их обратно в строку используется:
+</p>
+
+<div class="code-block">
+flex-direction: row;
 </div>
 
 <div class="result">
-Элементы становятся flex-элементами и выстраиваются в строку.
+Элементы снова выстроятся слева направо.
 </div>
 
 </div>
@@ -41,7 +64,7 @@ display: flex;
 
 <div class="z1__left">
 
-<div class="sqs">
+<div class="sqs" style="display:flex;flex-direction:column">
 
 <div class="sq"></div>
 <div class="sq"></div>
@@ -56,11 +79,16 @@ display: flex;
 
 <div class="code">
 
+<div class="code__row">
+<p>display:</p>
+<p>flex</p>
+</div>
+
 <form id="form">
 
 <label>
-<p>display</p>
-<input type="text">
+<p>flex-direction</p>
+<input type="text" placeholder="...">
 </label>
 
 </form>
@@ -78,8 +106,8 @@ display: flex;
 <div class="progress-container">
 
 <div class="btns-nav-lessons">
-<a class="btn back" href="/index.html"><</a>
-<a class="btn forward" href="./2.html">></a>
+<a class="btn back" href="./2.html"><</a>
+<a class="btn forward" href="./4.html">></a>
 </div>
 
 <div class="progress">
@@ -95,12 +123,11 @@ display: flex;
 <script src="../script.js"></script>
 
 <script>
-
 trainer({
-answer:'flex',
-lessonNumber:1,
+answer:'row',
+lessonNumber:3,
 apply:(sqs)=>{
-sqs.style.display='flex'
+sqs.style.flexDirection='row'
 }
 })
 

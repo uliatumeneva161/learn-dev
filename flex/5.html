@@ -4,33 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../style.css">
-<title>Flex 1</title>
+<title>Flex 5</title>
 </head>
 <body>
 
 <header>
 <img src="../croco.png">
 <div class="desc">
-<h2>Урок 1</h2>
-<p>Включи Flex</p>
+<h2>Урок 5</h2>
+<p>Раздвинь элементы</p>
 </div>
 </header>
 
 <div class="container flex1">
+
+
+
 <div class="theory">
 
 <div class="theory__badge">Теория</div>
 
-<div class="theory__title">Flex контейнер</div>
+<div class="theory__title">space-between</div>
 
-<p>Flex — это способ расположить элементы внутри контейнера.</p>
+<p>
+Значение space-between распределяет элементы по всей ширине контейнера.
+</p>
 
 <div class="code-block">
-display: flex;
+justify-content: space-between;
 </div>
 
 <div class="result">
-Элементы становятся flex-элементами и выстраиваются в строку.
+Первый элемент будет слева, последний справа.
 </div>
 
 </div>
@@ -41,7 +46,7 @@ display: flex;
 
 <div class="z1__left">
 
-<div class="sqs">
+<div class="sqs" style="display:flex">
 
 <div class="sq"></div>
 <div class="sq"></div>
@@ -56,11 +61,16 @@ display: flex;
 
 <div class="code">
 
+<div class="code__row">
+<p>display:</p>
+<p>flex</p>
+</div>
+
 <form id="form">
 
 <label>
-<p>display</p>
-<input type="text">
+<p>justify-content</p>
+<input type="text" placeholder="...">
 </label>
 
 </form>
@@ -78,8 +88,8 @@ display: flex;
 <div class="progress-container">
 
 <div class="btns-nav-lessons">
-<a class="btn back" href="/index.html"><</a>
-<a class="btn forward" href="./2.html">></a>
+<a class="btn back" href="./4.html"><</a>
+<a class="btn forward" href="./6.html">></a>
 </div>
 
 <div class="progress">
@@ -97,10 +107,10 @@ display: flex;
 <script>
 
 trainer({
-answer:'flex',
-lessonNumber:1,
+answer:'space-between',
+lessonNumber:5,
 apply:(sqs)=>{
-sqs.style.display='flex'
+sqs.style.justifyContent='space-between'
 }
 })
 

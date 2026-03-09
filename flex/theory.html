@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../style.css">
+<title>Flexbox Trainer</title>
+</head>
+<body>
+
+<header>
+<img src="../croco.png" alt="">
+</header>
+
+<div class="container flex1">
+
+<div class="progress-container">
+    <div class="progress">
+        <div class="progress_val"></div>
+    </div>
+</div>
+
+<div class="desc">
+<h1>Flexbox — Теория</h1>
+</div>
+
+<div class="theory">
+<div class="theory__badge">Теория</div>
+<div class="theory__title">Что такое Flexbox</div>
+<p>Flexbox — это система расположения элементов в строку или колонку.</p>
+<p>Чтобы включить flexbox, контейнеру задают:</p>
+<div class="code-block">display: flex;</div>
+<p>После этого элементы внутри контейнера становятся flex-элементами.</p>
+</div>
+
+<div class="theory">
+<div class="theory__badge">Теория</div>
+<div class="theory__title">Главная ось и поперечная ось</div>
+<p>Flexbox использует две оси:</p>
+<ul>
+<li><strong>Main axis</strong> — главная ось</li>
+<li><strong>Cross axis</strong> — поперечная ось</li>
+</ul>
+</div>
+
+<div class="theory">
+<div class="theory__badge">Теория</div>
+<div class="theory__title">flex-direction</div>
+<p>flex-direction определяет направление элементов:</p>
+<div class="code-block">
+row<br>
+column<br>
+row-reverse<br>
+column-reverse
+</div>
+</div>
+
+<div class="btns-nav-lessons">
+<a class="btn" href="../index.html">Back</a>
+<a class="btn" href="./1.html">Start Practice ></a>
+</div>
+
+</div>
+
+<script>
+const totalLessons = 7; // включая trainer.html
+const currentLesson = 0; // trainer = 0
+const progressLine = document.querySelector('.progress_val');
+progressLine.style.width = ((currentLesson+1)/totalLessons)*100 + '%';
+</script>
+
+</body>
+</html>

@@ -1,105 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../style.css">
+<title>Flex 2</title>
 </head>
 <body>
-    <header class="">
-        <img src="../croco.png" alt="">
-    </header>
-    <div class="container flex1">
-        <div class="z1">
-            <div class="z1__wrapper">
-                <div class="z1__left">
-                    <div class="sqs">
-                        <div class="sq"></div>
-                        <div class="sq"></div>
-                        <div class="sq"></div>
-                        <div class="sq"></div>
-                    </div>
-                </div>
 
-                <div class="z1__right">
+<header>
+<img src="../croco.png" alt="">
+<div class="desc">
+<h2>Урок 2</h2>
+<p>Поставь элементы в колонку</p>
+</div>
 
-                    <div class="code">
-                        <div class="code__row">
-                            <p>display:</p>
-                            <p>flex</p>
-                        </div>
-                        
-                        <form id="form">
+</header>
 
-                        <label for="ask">
-                            <p>flex-direction</p>
-                            <input type="text" id="ask"></label>
-                        
-                    </form>
-                    </div>
-                    
-                   
-                </div>
-            </div>
-             <p class="message"></p>
-        </div>
-
-         <div class="progress-container"> 
-            
-               <div class="btns-nav-lessons">
-                 <a href="./1.html" class="btn back"><</a>
-            <a class="btn forward">></a>
-               </div>
-           
-
-        <div class="progress">
-            <div class="progress__line">
-              <div class="progress_val"></div>
-            </div>
-        </div>
-           </div>
-
-       
-    </div>
+<div class="container flex1">
 
 
-    <script>
-        let progress = 2
-        let countTrains = 4
-        const progressVal = document.querySelector('.progress_val')
-        progressVal.style.width = (progress/countTrains)*100 + `%` 
-        console.log( progressVal.style.width)
-        window.addEventListener('DOMContentLoaded', ()=>{
-        const sqs = document.querySelector('.sqs')
-        const form = document.getElementById('form')
-        const input = document.querySelector('#form input[type="text"]')
-        let inputValue = ''
-        input?.addEventListener('input', (e)=>{
-            inputValue = e.target.value
-            
-        })
-        console.log(inputValue)
-        
-        const message = document.querySelector('.message')
-        sqs.style.flexDirection = 'column'
-        let sms = ''
-        form.addEventListener('submit', (e)=>{
-            e.preventDefault()
-           
-            
-           
-            if(inputValue === 'row'){
-                message.innerText = 'true'
-                sqs.style.flexDirection = 'row'
-                progress = 2
-            }else{
-                
-                 message.innerText = 'think again'
-            }
-        })
-        })
-       
-    </script>
+<div class="theory">
+
+<div class="theory__badge">Теория</div>
+
+<div class="theory__title">
+Направление flex
+</div>
+
+<p>
+После того как контейнер становится flex, можно изменить направление элементов.
+</p>
+
+<p>
+По умолчанию элементы идут в строку:
+</p>
+
+<div class="code-block">
+flex-direction: row;
+</div>
+
+<p>
+Чтобы расположить элементы вертикально используется:
+</p>
+
+<div class="code-block">
+flex-direction: column;
+</div>
+
+<div class="result">
+Элементы выстроятся сверху вниз.
+</div>
+
+</div>
+
+<div class="z1">
+
+<div class="z1__wrapper">
+
+<div class="z1__left">
+
+<div class="sqs" style="display:flex">
+
+<div class="sq"></div>
+<div class="sq"></div>
+<div class="sq"></div>
+<div class="sq"></div>
+
+</div>
+
+</div>
+
+<div class="z1__right">
+
+<div class="code">
+
+<div class="code__row">
+<p>display:</p>
+<p>flex</p>
+</div>
+
+<form id="form">
+
+<label>
+<p>flex-direction</p>
+<input type="text" placeholder="...">
+</label>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+<p class="message"></p>
+
+</div>
+
+<div class="progress-container">
+
+<div class="btns-nav-lessons">
+<a class="btn back" href="./1.html"><</a>
+<a class="btn forward" href="./3.html">></a>
+</div>
+
+<div class="progress">
+<div class="progress__line">
+<div class="progress_val"></div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<script src="../script.js"></script>
+
+<script>
+
+
+trainer({
+answer:'column',
+lessonNumber:2,
+apply:(sqs)=>{
+sqs.style.flexDirection='column'
+}
+})
+
+</script>
+
 </body>
 </html>

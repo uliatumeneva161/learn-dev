@@ -4,33 +4,42 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../style.css">
-<title>Flex 1</title>
+<title>Flex 6</title>
 </head>
 <body>
 
 <header>
 <img src="../croco.png">
 <div class="desc">
-<h2>Урок 1</h2>
-<p>Включи Flex</p>
+<h2>Урок 6</h2>
+<p>Выровняй элементы по вертикали</p>
 </div>
 </header>
 
 <div class="container flex1">
+
+
+
 <div class="theory">
 
 <div class="theory__badge">Теория</div>
 
-<div class="theory__title">Flex контейнер</div>
+<div class="theory__title">Поперечная ось</div>
 
-<p>Flex — это способ расположить элементы внутри контейнера.</p>
+<p>
+Кроме главной оси есть поперечная — cross axis.
+</p>
+
+<p>
+Свойство align-items управляет выравниванием по этой оси.
+</p>
 
 <div class="code-block">
-display: flex;
+align-items: center;
 </div>
 
 <div class="result">
-Элементы становятся flex-элементами и выстраиваются в строку.
+Элементы окажутся по центру контейнера по вертикали.
 </div>
 
 </div>
@@ -41,7 +50,7 @@ display: flex;
 
 <div class="z1__left">
 
-<div class="sqs">
+<div class="sqs" style="display:flex;height:200px">
 
 <div class="sq"></div>
 <div class="sq"></div>
@@ -56,11 +65,16 @@ display: flex;
 
 <div class="code">
 
+<div class="code__row">
+<p>display:</p>
+<p>flex</p>
+</div>
+
 <form id="form">
 
 <label>
-<p>display</p>
-<input type="text">
+<p>align-items</p>
+<input type="text" placeholder="...">
 </label>
 
 </form>
@@ -78,8 +92,8 @@ display: flex;
 <div class="progress-container">
 
 <div class="btns-nav-lessons">
-<a class="btn back" href="/index.html"><</a>
-<a class="btn forward" href="./2.html">></a>
+<a class="btn back" href="./5.html"><</a>
+<a class="btn forward">></a>
 </div>
 
 <div class="progress">
@@ -97,10 +111,10 @@ display: flex;
 <script>
 
 trainer({
-answer:'flex',
-lessonNumber:1,
+answer:'center',
+lessonNumber:6,
 apply:(sqs)=>{
-sqs.style.display='flex'
+sqs.style.alignItems='center'
 }
 })
 
